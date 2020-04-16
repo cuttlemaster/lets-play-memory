@@ -7,5 +7,8 @@ My development team does quarterly showcases where we build small projects with 
 * User can choose the size of their game (4x4 or 6x6)
 * User can play the game to completion
 
-
+## Desired Skills Development
+* Continued strengthening of vanilla javascript skills (being in management has left them rusty)
+* Learning how to properly shuffle an array (Field-Yates algorithm)
+* Attempt some CSS animations when tiles are chosen
 
