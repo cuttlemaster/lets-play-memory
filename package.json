@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/cuttlemaster/lets-play-memory/issues"
   },
-  "homepage": "https://github.com/cuttlemaster/lets-play-memory#readme"
+  "homepage": "https://github.com/cuttlemaster/lets-play-memory#readme",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
 }
