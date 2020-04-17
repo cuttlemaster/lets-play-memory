@@ -1,0 +1,19 @@
+{
+  "name": "lets-play-memory",
+  "version": "1.0.0",
+  "description": "simple memory game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuttlemaster/lets-play-memory.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cuttlemaster/lets-play-memory/issues"
+  },
+  "homepage": "https://github.com/cuttlemaster/lets-play-memory#readme"
+}
