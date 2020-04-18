@@ -1,0 +1,124 @@
+html {
+  box-sizing: border-box;
+  font-size: 18px; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+body {
+  background-color: #ffffff; }
+
+header {
+  display: flex;
+  margin: 0 auto;
+  padding-top: 25px;
+  justify-content: space-between;
+  max-width: 1000px; }
+  header section {
+    padding-top: 3px; }
+
+h1 {
+  font-family: "Black Han Sans", "Times New Roman", arial, sans-serif;
+  font-size: 48px;
+  line-height: 52px;
+  text-transform: uppercase; }
+  h1 span:nth-of-type(1) {
+    color: #44749d; }
+  h1 span:nth-of-type(2) {
+    color: #c6d4e1; }
+  h1 span:nth-of-type(3) {
+    color: #bdb8ad; }
+
+h2 {
+  position: relative;
+  color: #44749d;
+  font-family: "Roboto", "helvetica neue", helvetica, arial, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  text-transform: uppercase; }
+  h2::before {
+    content: "";
+    position: absolute;
+    background-color: #bdb8ad;
+    width: 40%;
+    height: 2px;
+    bottom: -5px;
+    left: 30%; }
+
+button {
+  margin-left: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 3px solid #44749d;
+  border-radius: 7px;
+  color: #44749d;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  outline: none;
+  width: 125px; }
+  button:hover {
+    background-color: #c6d4e1;
+    cursor: pointer; }
+  button.active {
+    background-color: #44749d;
+    color: #ffffff; }
+  button.disabled {
+    position: relative;
+    background-color: #c6d4e1;
+    border: 3px solid #c6d4e1;
+    text-decoration: line-through; }
+    button.disabled::before {
+      content: "";
+      position: absolute;
+      background-color: #ffffff;
+      width: 70%;
+      height: 3px;
+      top: 16px;
+      left: 15%; }
+    button.disabled:hover {
+      cursor: default; }
+
+.tile-selection {
+  margin: 0 auto;
+  padding-top: 50px;
+  max-width: 1000px; }
+  .tile-selection section {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px; }
+
+.game-board {
+  display: flex;
+  position: relative;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px; }
+  .game-board section {
+    background-color: #bdb8ad;
+    border-radius: 10px;
+    margin: 10px;
+    padding-top: 65px;
+    text-align: center;
+    width: 150px;
+    height: 150px; }
+
+.center {
+  text-align: center; }

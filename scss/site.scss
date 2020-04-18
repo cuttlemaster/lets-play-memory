@@ -1,0 +1,143 @@
+@import 'normalize';
+
+// color variables ==========
+$white: #ffffff;
+$black: #000000;
+
+$cobalt: #44749d;
+$light-blue: #c6d4e1;
+$sand: #eBe7e0;
+$tan: #bdb8ad;
+
+// font variables ==========
+$black-han-sans: 'Black Han Sans', 'Times New Roman', arial, sans-serif;
+$roboto: 'Roboto', 'helvetica neue', helvetica, arial, sans-serif;
+
+// global element styles ==========
+body { background-color: $white; }
+
+header {
+  display: flex;
+  margin: 0 auto;
+  padding-top: 25px;
+  justify-content: space-between;
+  max-width: 1000px;
+
+  section { padding-top: 3px; }
+}
+
+h1 {
+  font-family: $black-han-sans;
+  font-size: 48px;
+  line-height: 52px;
+  text-transform: uppercase;
+
+  span {
+    &:nth-of-type(1) { color: $cobalt; }
+    &:nth-of-type(2) { color: $light-blue; }
+    &:nth-of-type(3) { color: $tan; }
+  }
+}
+
+h2 {
+  position: relative;
+  color: $cobalt;
+  font-family: $roboto;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $tan;
+    width: 40%;
+    height: 2px;
+    bottom: -5px;
+    left: 30%;
+  }
+}
+
+button {
+  margin-left: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 3px solid $cobalt;
+  border-radius: 7px;
+  color: $cobalt;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  outline: none;
+  width: 125px;
+
+  &:hover {
+    background-color: $light-blue;
+    cursor: pointer;
+  }
+
+  &.active {
+    background-color: $cobalt;
+    color: $white;
+  }
+
+  &.disabled {
+    position: relative;
+    background-color: $light-blue;
+    border: 3px solid $light-blue;
+    text-decoration: line-through;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: $white;
+      width: 70%;
+      height: 3px;
+      top: 16px;
+      left: 15%;
+    }
+
+    &:hover { cursor: default; }
+  }
+}
+
+.tile-selection {
+  margin: 0 auto;
+  padding-top: 50px;
+  max-width: 1000px;
+
+  section {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+  }
+}
+
+.game-board {
+  display: flex;
+  position: relative;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 800px;
+
+  section {
+    background-color: $tan;
+    border-radius: 10px;
+    margin: 10px;
+    padding-top: 65px;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+  }
+}
+
+// global utility classes ==========
+.center { text-align: center; }
+
+
+
