@@ -18,13 +18,6 @@ button {
     cursor: pointer;
   }
 
-  &.small {
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 10px;
-    width: 50px;
-  }
-
   &.active {
     background-color: $cobalt;
     color: $white;
@@ -49,6 +42,13 @@ button {
     &:hover { cursor: default; }
   }
 
+  &.small {
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    width: 50px;
+  }
+
   &.play {
     display: block;
     margin: 25px auto 0 auto;
@@ -60,6 +60,8 @@ button {
     line-height: 52px;
     text-transform: uppercase;
     width: 400px;
+
+    &.hide { display: none; }
 
     &:hover {
       background-color: transparent;
