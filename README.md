@@ -15,3 +15,6 @@ My development team does quarterly showcases where we build small projects with 
 ### Developmet Instructions
 * When developing locally, run `npm run scss` to ensure styles are compiled as changes are made.
 
+[https://festive-cori-fc9c36.netlify.app/](https://festive-cori-fc9c36.netlify.app/)
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eedcdf86-dfe0-4523-bef6-e7ace6290d9e/deploy-status)](https://app.netlify.com/sites/festive-cori-fc9c36/deploys)
