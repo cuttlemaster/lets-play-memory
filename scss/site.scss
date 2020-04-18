@@ -72,12 +72,14 @@ button {
   font-weight: 700;
   line-height: 20px;
   outline: none;
-  width: 50px;
+  width: 125px;
 
   &:hover {
     background-color: $light-blue;
     cursor: pointer;
   }
+
+  &.small { width: 50px; }
 
   &.active {
     background-color: $cobalt;
@@ -123,16 +125,13 @@ button {
   margin-right: auto;
   margin-bottom: 0;
   margin-left: auto;
-  border: 1px solid $black;
   flex-wrap: wrap;
   justify-content: center;
-  // max-width: 800px;
+  max-width: 800px;
 
-  &.tiles-16 { max-width: 800px;
   &.tiles-20 { max-width: 900px; }
-  &.tiles-24 { max-width: 1000px; }
+  &.tiles-24 { max-width: 1100px; }
   &.tiles-32 { max-width: 1000px; }
-  &.tiles-36 { max-width: 1000px; }
 
   section {
     background-image: url("/images/card-back.png");
@@ -141,8 +140,11 @@ button {
     margin: 10px;
     padding-top: 65px;
     text-align: center;
-    width: 150px;
     height: 150px;
+    width: 150px;
+
+    &.tiles-32 { height: 100px; width: 100px; }
+    &.tiles-36 { height: 100px; width: 100px; }
 
     &:hover {
       cursor: pointer;
