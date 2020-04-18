@@ -69,7 +69,7 @@ button {
   font-weight: 700;
   line-height: 20px;
   outline: none;
-  width: 125px; }
+  width: 50px; }
   button:hover {
     background-color: #c6d4e1;
     cursor: pointer; }
@@ -108,17 +108,22 @@ button {
   margin-right: auto;
   margin-bottom: 0;
   margin-left: auto;
+  border: 1px solid #000000;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 800px; }
   .game-board section {
-    background-color: #bdb8ad;
+    background-image: url("/images/card-back.png");
     border-radius: 10px;
+    box-shadow: 0 0 3px #888888;
     margin: 10px;
     padding-top: 65px;
     text-align: center;
     width: 150px;
     height: 150px; }
+    .game-board section:hover {
+      cursor: pointer;
+      box-shadow: 0 0 8px #000000; }
 
 .center {
   text-align: center; }
