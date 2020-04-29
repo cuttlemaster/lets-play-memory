@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // initialize the default size of the game
   let numberOfCards = 16;
+  let firstChoice = '';
+  let secondChoice = '';
 
   // whenever a game size button is clicked, remove the active state
   // from all buttons and then add the active state back to the once clicked
@@ -61,14 +63,41 @@ document.addEventListener("DOMContentLoaded", () => {
     gameBoard.classList.remove('hide');
 
     const allCards = buildGameBoard(numberOfCards, imageChoice);
-    console.log(allCards);
+    // console.log(allCards);
+
+    let visibleCards = 0;
 
     allCards.forEach( (card) => {
       card.addEventListener('click', (e) => {
-        const cardID = e.target.getAttribute('data-id');
-        console.log(cardID);
 
-        e.target.classList.remove('hidden');
+        console.log(`visible cards = ${visibleCards}`);
+
+        if (visibleCards === 0) {
+
+          e.target.classList.remove('hidden');
+          localStorage.setItem('card1', e.target.getAttribute('data-id'))
+          visibleCards = visibleCards + 1;
+          // console.log(`Card 1 ID is ${localStorage.getItem('card1')} and visible cards = ${visibleCards}`);
+
+        } else if (visibleCards === 1) {
+
+          e.target.classList.remove('hidden');
+          localStorage.setItem('card2', e.target.getAttribute('data-id'))
+          visibleCards = visibleCards + 1;
+          // console.log(`Card 1 ID is ${localStorage.getItem('card1')}, Card 2 ID is ${localStorage.getItem('card2')}, and visible cards = ${visibleCards}`);
+
+          let result = checkForMatch();
+
+          if (result === true) {
+            //alert('MATCH!');
+            window.setTimeout(window.alert, 500, 'Correct Match!');
+          } else {
+            // alert('NOT A MATCH!');
+            window.setTimeout(window.alert, 500, 'Incorrect Match!');
+            visibleCards = 0;
+          }
+        }
+
       });
     });
   });

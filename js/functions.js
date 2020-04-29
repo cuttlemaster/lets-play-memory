@@ -27,14 +27,8 @@ const buildGameBoard = (numberOfCards, imageChoice) => {
   const gameBoard = document.querySelector('.game-board');
   gameBoard.classList.add(`tiles-${numberOfCards}`);
 
-  // console.log(`Board Size: ${numberOfCards}`);
-  // console.log(`Image: ${imageChoice}`)
-
   startingCardOrder = buildCardArray(numberOfCards);
-  // console.log(`Starting Order: ${startingCardOrder}`);
-
   shuffledCardOrder = buildShuffledCardArray(startingCardOrder, numberOfCards);
-  // console.log(`Shuffled Order: ${shuffledCardOrder}`);
 
   for (i = 0; i < numberOfCards; i++) {
     const newCardTile = document.createElement('section');
@@ -50,4 +44,16 @@ const buildGameBoard = (numberOfCards, imageChoice) => {
 
   const generatedCards = [...document.querySelectorAll('.game-board section')];
   return generatedCards;
+};
+
+
+const checkForMatch = () => {
+  const card1 = parseInt(localStorage.getItem('card1'));
+  const card2 = parseInt(localStorage.getItem('card2'));
+
+  if (card2 === (card1 + 1) || card2 === (card1 - 1)) {
+    return true;
+  } else {
+    return false;
+  }
 };
