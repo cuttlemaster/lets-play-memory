@@ -33,6 +33,7 @@ const buildShuffledCardArray = (startingCardOrder, numberOfCards) => {
 
 const buildGameBoard = (numberOfCards, imageChoice) => {
   const gameBoard = document.querySelector('.game-board');
+  gameBoard.classList.add(`tiles-${numberOfCards}`);
 
   console.log(`Board Size: ${numberOfCards}`);
   console.log(`Image: ${imageChoice}`)
@@ -46,7 +47,7 @@ const buildGameBoard = (numberOfCards, imageChoice) => {
   for (i = 0; i < numberOfCards; i++) {
     const newCardTile = document.createElement('section');
     const newCardTileImage = document.createElement('img');
-    newCardTileImage.setAttribute('src', 'http://placehold.it/140x140?text=IMAGE');
+    newCardTileImage.setAttribute('src', `images/${imageChoice}/${imageChoice}${shuffledCardOrder[i]}.svg`);
     newCardTile.appendChild(newCardTileImage);
     gameBoard.appendChild(newCardTile);
   }
