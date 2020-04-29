@@ -1,11 +1,3 @@
-// receive the number of desired cards for the game and return
-// an array of numbers from 1 to the number desired for the game board
-// const createTotalCards = (numberOfCards) => {
-//   let totalCards = [];
-//   for (i = 1; i < (numberOfCards + 1); i++) { totalCards.push(i); }
-//   return totalCards;
-// };
-
 const getRandomCard = (startingArray) => {
   return Math.floor(Math.random() * Math.floor(startingArray.length));
 };
@@ -35,14 +27,14 @@ const buildGameBoard = (numberOfCards, imageChoice) => {
   const gameBoard = document.querySelector('.game-board');
   gameBoard.classList.add(`tiles-${numberOfCards}`);
 
-  console.log(`Board Size: ${numberOfCards}`);
-  console.log(`Image: ${imageChoice}`)
+  // console.log(`Board Size: ${numberOfCards}`);
+  // console.log(`Image: ${imageChoice}`)
 
   startingCardOrder = buildCardArray(numberOfCards);
-  console.log(`Starting Order: ${startingCardOrder}`);
+  // console.log(`Starting Order: ${startingCardOrder}`);
 
   shuffledCardOrder = buildShuffledCardArray(startingCardOrder, numberOfCards);
-  console.log(`Shuffled Order: ${shuffledCardOrder}`);
+  // console.log(`Shuffled Order: ${shuffledCardOrder}`);
 
   for (i = 0; i < numberOfCards; i++) {
     const newCardTile = document.createElement('section');

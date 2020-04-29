@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // update the size of the game based on which button is clicked
       numberOfCards = parseInt(e.target.getAttribute('data-size'));
-      console.log(`number of cards: ${numberOfCards}`);
     });
   });
 
@@ -60,9 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
     e.target.classList.add('hide');
     imageSelection.classList.add('hide');
     gameBoard.classList.remove('hide');
-
-    // const totalCards = createTotalCards(16);
-    // console.log(totalCards);
 
     buildGameBoard(numberOfCards, imageChoice);
   });
