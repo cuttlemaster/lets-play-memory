@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     allCards.forEach( (card) => {
       card.addEventListener('click', (e) => {
 
-        console.log(`visible cards = ${visibleCards}`);
+        // console.log(`visible cards = ${visibleCards}`);
 
         if (visibleCards === 0) {
 

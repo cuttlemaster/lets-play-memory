@@ -57,7 +57,7 @@ const checkForMatch = () => {
   const card2 = localStorage.getItem('card2');
 
   const currentMatchID = card1 + card2;
-  console.log(`matchID = ${currentMatchID}`);
+  // console.log(`matchID = ${currentMatchID}`);
 
   if (matchIDs.includes(currentMatchID)) {
     return true;
