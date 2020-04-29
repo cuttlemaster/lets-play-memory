@@ -14,20 +14,20 @@
     <header>
       <h1><span>Lets</span><span>Play</span><span>Memory</span></h1>
       <section>
-        <button class="small active">16</button>
-        <button class="small">20</button>
-        <button class="small">24</button>
-        <button class="small">32</button>
-        <button class="small">36</button>
+        <button class="small active" data-size="16">16</button>
+        <button class="small" data-size="20">20</button>
+        <button class="small" data-size="24">24</button>
+        <button class="small" data-size="32">32</button>
+        <button class="small" data-size="36">36</button>
       </section>
     </header>
 
     <div class="image-selection">
       <h2 class="center">Which pictures would you like to use?</h2>
       <section>
-        <button>Tomatoes</button>
-        <button>Monsters</button>
-        <button>Outdoors</button>
+        <button data-image="tomatoes">Tomatoes</button>
+        <button data-image="monsters">Monsters</button>
+        <button data-image="outdoors">Outdoors</button>
       </section>
 
       <button class="start-game hide">Start Game!</button>
@@ -52,6 +52,7 @@
       <section></section>
     </div>
 
+    <script src="js/functions.js"></script>
     <script src="js/site.js"></script>
   </body>
 </html>

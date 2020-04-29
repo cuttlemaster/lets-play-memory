@@ -8,6 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const startGame = document.querySelector('.start-game');
   const gameBoard = document.querySelector('.game-board');
 
+  // initialize the default size of the game
+  let gameSize = 16;
+
   // whenever a game size button is clicked, remove the active state
   // from all buttons and then add the active state back to the once clicked
   boardSize.forEach( (button) => {
@@ -21,6 +24,9 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         button.classList.add('active');
       }
+
+      // update the size of the game based on which button is clicked
+      gameSize = e.target.getAttribute('data-size');
     });
   });
 
@@ -38,6 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
         button.classList.add('active');
       }
 
+      // store the image choice the user makes for board creation
+      imageChoice = e.target.getAttribute('data-image');
+
       // show the start game button after image type selection
       startGame.classList.remove('hide');
     });
@@ -50,6 +59,11 @@ document.addEventListener("DOMContentLoaded", () => {
     e.target.classList.add('hide');
     imageSelection.classList.add('hide');
     gameBoard.classList.remove('hide');
+
+    // const totalCards = createTotalCards(16);
+    // console.log(totalCards);
+
+    buildGameBoard(gameSize, imageChoice);
   });
 
 });
