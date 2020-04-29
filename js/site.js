@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const gameBoard = document.querySelector('.game-board');
 
   // initialize the default size of the game
-  let gameSize = 16;
+  let numberOfCards = 16;
 
   // whenever a game size button is clicked, remove the active state
   // from all buttons and then add the active state back to the once clicked
@@ -26,7 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // update the size of the game based on which button is clicked
-      gameSize = e.target.getAttribute('data-size');
+      numberOfCards = parseInt(e.target.getAttribute('data-size'));
+      console.log(`number of cards: ${numberOfCards}`);
     });
   });
 
@@ -63,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // const totalCards = createTotalCards(16);
     // console.log(totalCards);
 
-    buildGameBoard(gameSize, imageChoice);
+    buildGameBoard(numberOfCards, imageChoice);
   });
 
 });

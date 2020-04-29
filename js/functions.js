@@ -6,6 +6,38 @@
 //   return totalCards;
 // };
 
-const buildGameBoard = (gameSize, imageChoice) => {
-  console.log(`Board Size: ${gameSize}, Image Choice: ${imageChoice}`);
+const getRandomCard = (startingArray) => {
+  return Math.floor(Math.random() * Math.floor(startingArray.length));
+};
+
+const buildCardArray = (cardsNeeded) => {
+  let cards = [];
+
+  for (i = 1; i < (cardsNeeded + 1); i++) {
+    cards.push(i);
+  }
+
+  return cards;
+};
+
+const buildShuffledCardArray = (startingCardOrder, numberOfCards) => {
+  let shuffledCards = [];
+
+  for (i = 0; i < numberOfCards; i++) {
+    const randomNumber = getRandomCard(startingCardOrder);
+    shuffledCards.push(startingCardOrder.splice(randomNumber, 1));
+  }
+
+  return shuffledCards;
+};
+
+const buildGameBoard = (numberOfCards, imageChoice) => {
+  console.log(`Board Size: ${numberOfCards}`);
+  console.log(`Image: ${imageChoice}`)
+
+  startingCardOrder = buildCardArray(numberOfCards);
+  console.log(`Starting Order: ${startingCardOrder}`);
+
+  shuffledCardOrder = buildShuffledCardArray(startingCardOrder, numberOfCards);
+  console.log(`Shuffled Order: ${shuffledCardOrder}`);
 };
