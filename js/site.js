@@ -63,7 +63,6 @@ document.addEventListener("DOMContentLoaded", () => {
     gameBoard.classList.remove('hide');
 
     const allCards = buildGameBoard(numberOfCards, imageChoice);
-    // console.log(allCards);
 
     let visibleCards = 0;
 
@@ -75,25 +74,28 @@ document.addEventListener("DOMContentLoaded", () => {
         if (visibleCards === 0) {
 
           e.target.classList.remove('hidden');
+          e.target.classList.add('visible');
           localStorage.setItem('card1', e.target.getAttribute('data-id'))
           visibleCards = visibleCards + 1;
-          // console.log(`Card 1 ID is ${localStorage.getItem('card1')} and visible cards = ${visibleCards}`);
 
         } else if (visibleCards === 1) {
 
           e.target.classList.remove('hidden');
+          e.target.classList.add('visible');
           localStorage.setItem('card2', e.target.getAttribute('data-id'))
           visibleCards = visibleCards + 1;
-          // console.log(`Card 1 ID is ${localStorage.getItem('card1')}, Card 2 ID is ${localStorage.getItem('card2')}, and visible cards = ${visibleCards}`);
 
           let result = checkForMatch();
 
           if (result === true) {
-            //alert('MATCH!');
-            window.setTimeout(window.alert, 500, 'Correct Match!');
+            window.setTimeout(window.alert, 500, 'Match!');
+            setTimeout(keepCardsVisible, 500);
+            setTimeout(clearLocalStorage, 500);
+            visibleCards = 0;
           } else {
-            // alert('NOT A MATCH!');
-            window.setTimeout(window.alert, 500, 'Incorrect Match!');
+            window.setTimeout(window.alert, 500, 'No Match!');
+            setTimeout(flipCardsBackOver, 500);
+            setTimeout(clearLocalStorage, 500);
             visibleCards = 0;
           }
         }
