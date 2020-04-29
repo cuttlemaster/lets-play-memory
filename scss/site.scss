@@ -97,7 +97,7 @@ h2 {
     position: relative;
     display: flex;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 15px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -112,15 +112,16 @@ h2 {
         content: "";
         position: absolute;
         display: block;
-        background-image: url("/images/card-back.png");
-        border-radius: 5px;
+        background-color: $sand;
+        // background-image: url("/images/card-back.png");
+        border-radius: 15px;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
       }
 
-      &:hover { box-shadow: 0 0 8px $black; }
+      &:hover { box-shadow: 0 0 8px $tan; }
     }
 
     &:hover { cursor: pointer; }

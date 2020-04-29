@@ -1,4 +1,4 @@
-const matchIDs = ['12','21','34',,'43','56','65','78','87','910','109','1112','1211','1314','1413','1516','1615','1718','1817','1920','2019','2122','2221','2324','2423','2526','2625','2728','2827','2930','3029','3132','3231','3334','3433','3536','3635']
+const matchIDs = ['12','21','34',,'43','56','65','78','87','910','109','1112','1211','1314','1413','1516','1615','1718','1817','1920','2019','2122','2221','2324','2423','2526','2625','2728','2827','2930','3029','3132','3231','3334','3433','3536','3635'];
 
 const getRandomCard = (startingArray) => {
   return Math.floor(Math.random() * Math.floor(startingArray.length));
@@ -50,14 +50,10 @@ const buildGameBoard = (numberOfCards, imageChoice) => {
 
 
 const checkForMatch = () => {
-  // const card1 = parseInt(localStorage.getItem('card1'));
-  // const card2 = parseInt(localStorage.getItem('card2'));
-
   const card1 = localStorage.getItem('card1');
   const card2 = localStorage.getItem('card2');
 
   const currentMatchID = card1 + card2;
-  // console.log(`matchID = ${currentMatchID}`);
 
   if (matchIDs.includes(currentMatchID)) {
     return true;
@@ -65,7 +61,6 @@ const checkForMatch = () => {
     return false;
   }
 };
-
 
 const clearLocalStorage = () => { localStorage.clear(); };
 

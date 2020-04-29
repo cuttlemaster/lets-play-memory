@@ -1,17 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   // store various elements into arrays and consts for use
-  const boardSize = [...document.querySelectorAll('header button')];
+  const boardSize = [...document.querySelectorAll('header button.small')];
   const imageType = [...document.querySelectorAll('.image-selection section button')];
 
   const imageSelection = document.querySelector('.image-selection');
   const startGame = document.querySelector('.start-game');
   const gameBoard = document.querySelector('.game-board');
+  const newGame = document.querySelector('.new-game');
 
   // initialize the default size of the game
   let numberOfCards = 16;
-  let firstChoice = '';
-  let secondChoice = '';
 
   // whenever a game size button is clicked, remove the active state
   // from all buttons and then add the active state back to the once clicked
@@ -54,13 +53,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-
   // when the "start game" text is clicked, hide the image type selection
   // and reveal the game board tiles to the user so the game can begin
   startGame.addEventListener('click', (e) => {
     e.target.classList.add('hide');
     imageSelection.classList.add('hide');
     gameBoard.classList.remove('hide');
+    newGame.classList.remove('hide');
+
+    boardSize.forEach((btn) => { btn.classList.add('hide'); });
 
     const allCards = buildGameBoard(numberOfCards, imageChoice);
 
@@ -68,8 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     allCards.forEach( (card) => {
       card.addEventListener('click', (e) => {
-
-        // console.log(`visible cards = ${visibleCards}`);
 
         if (visibleCards === 0) {
 
@@ -88,14 +87,12 @@ document.addEventListener("DOMContentLoaded", () => {
           let result = checkForMatch();
 
           if (result === true) {
-            window.setTimeout(window.alert, 500, 'Match!');
-            setTimeout(keepCardsVisible, 500);
-            setTimeout(clearLocalStorage, 500);
+            setTimeout(keepCardsVisible, 200);
+            setTimeout(clearLocalStorage, 200);
             visibleCards = 0;
           } else {
-            window.setTimeout(window.alert, 500, 'No Match!');
-            setTimeout(flipCardsBackOver, 500);
-            setTimeout(clearLocalStorage, 500);
+            setTimeout(flipCardsBackOver, 1500);
+            setTimeout(clearLocalStorage, 200);
             visibleCards = 0;
           }
         }
@@ -104,5 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-
+  newGame.addEventListener('click', () => {
+    location.reload();
+  });
 });
