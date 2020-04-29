@@ -98,7 +98,7 @@ button {
     margin-bottom: 0;
     margin-left: 10px;
     width: 50px; }
-  button.play {
+  button.start-game {
     display: block;
     margin: 25px auto 0 auto;
     padding-bottom: 0;
@@ -109,17 +109,17 @@ button {
     line-height: 52px;
     text-transform: uppercase;
     width: 400px; }
-    button.play.hide {
+    button.start-game.hide {
       display: none; }
-    button.play:hover {
+    button.start-game:hover {
       background-color: transparent;
       color: #44749d; }
 
-.tile-selection {
+.image-selection {
   margin: 0 auto;
   padding-top: 50px;
   max-width: 1000px; }
-  .tile-selection section {
+  .image-selection section {
     display: flex;
     justify-content: center;
     padding-top: 25px; }
