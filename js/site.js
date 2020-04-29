@@ -60,7 +60,18 @@ document.addEventListener("DOMContentLoaded", () => {
     imageSelection.classList.add('hide');
     gameBoard.classList.remove('hide');
 
-    buildGameBoard(numberOfCards, imageChoice);
+    const allCards = buildGameBoard(numberOfCards, imageChoice);
+    console.log(allCards);
+
+    allCards.forEach( (card) => {
+      card.addEventListener('click', (e) => {
+        const cardID = e.target.getAttribute('data-id');
+        console.log(cardID);
+
+        e.target.classList.remove('hidden');
+      });
+    });
   });
+
 
 });

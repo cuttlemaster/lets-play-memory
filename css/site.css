@@ -156,7 +156,7 @@ button {
     .game-board section.tiles-36 {
       height: 100px;
       width: 100px; }
-    .game-board section::before {
+    .game-board section.hidden::before {
       content: "";
       position: absolute;
       display: block;
@@ -166,13 +166,10 @@ button {
       height: 100%;
       top: 0;
       left: 0; }
-    .game-board section:hover {
-      cursor: pointer;
+    .game-board section.hidden:hover {
       box-shadow: 0 0 8px #000000; }
-    .game-board section.open {
-      box-shadow: none; }
-      .game-board section.open::before {
-        display: none; }
+    .game-board section:hover {
+      cursor: pointer; }
 
 .center {
   text-align: center; }

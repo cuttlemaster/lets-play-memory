@@ -38,11 +38,16 @@ const buildGameBoard = (numberOfCards, imageChoice) => {
 
   for (i = 0; i < numberOfCards; i++) {
     const newCardTile = document.createElement('section');
+    newCardTile.setAttribute('data-id', `${shuffledCardOrder[i]}`);
     newCardTile.classList.add(`tiles-${numberOfCards}`);
+    newCardTile.classList.add('hidden');
 
     const newCardTileImage = document.createElement('img');
     newCardTileImage.setAttribute('src', `images/${imageChoice}/${imageChoice}${shuffledCardOrder[i]}.svg`);
     newCardTile.appendChild(newCardTileImage);
     gameBoard.appendChild(newCardTile);
   }
+
+  const generatedCards = [...document.querySelectorAll('.game-board section')];
+  return generatedCards;
 };
