@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(clearLocalStorage, 200);
             visibleCards = 0;
           } else {
-            setTimeout(flipCardsBackOver, 1500);
+            setTimeout(flipCardsBackOver, 1000);
             setTimeout(clearLocalStorage, 200);
             visibleCards = 0;
           }
