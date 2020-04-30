@@ -31,11 +31,21 @@ header {
     padding-left: 25px;
   }
 
+  @include small {
+    display: block;
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
   section {
     padding-top: 3px;
 
     button {
-      &.game-size-32 { @include medium { display: none; } }
+      &.game-size-32 { @include medium-down { display: none; } }
+      &.game-size-24 { @include small { display: none; } }
+      &.game-size-20 { @include small { display: none; } }
+      &.game-size-16 { @include small { display: none; } }
     }
   }
 }
@@ -45,6 +55,22 @@ h1 {
   font-size: 48px;
   line-height: 52px;
   text-transform: uppercase;
+
+  @include small {
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+  }
+
+  @include xsmall {
+    font-size: 34px;
+    line-height: 38px;
+  }
+
+  @include xxsmall {
+    font-size: 28px;
+    line-height: 32px;
+  }
 
   span {
     &:nth-of-type(1) { color: $cobalt; }
@@ -62,6 +88,23 @@ h2 {
   line-height: 28px;
   text-transform: uppercase;
 
+  @include small {
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  @include xsmall {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  @include xxsmall {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -70,6 +113,11 @@ h2 {
     height: 2px;
     bottom: -5px;
     left: 30%;
+
+    @include small {
+      width: 80%;
+      left: 10%;
+    }
   }
 }
 
@@ -87,16 +135,10 @@ h2 {
   }
 
   @include small {
+    padding-top: 15px;
     padding-right: 15px;
     padding-left: 15px;
     max-width: 100%;
-  }
-
-  h2 {
-    @include small {
-      padding-right: 25px;
-      padding-left: 25px;
-    }
   }
 
   section {

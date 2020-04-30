@@ -1,3 +1,15 @@
+@mixin xxsmall {
+  @media screen and (min-width: 0px) and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin xsmall {
+  @media screen and (min-width: 0px) and (max-width: 375px) {
+    @content;
+  }
+}
+
 @mixin small {
   @media screen and (min-width: 0px) and (max-width: 640px) {
     @content;

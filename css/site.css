@@ -30,10 +30,25 @@ header {
     header {
       padding-right: 25px;
       padding-left: 25px; } }
+  @media screen and (min-width: 0px) and (max-width: 640px) {
+    header {
+      display: block;
+      padding-top: 15px;
+      padding-right: 15px;
+      padding-left: 15px; } }
   header section {
     padding-top: 3px; }
-    @media screen and (min-width: 641px) and (max-width: 1023px) {
+    @media screen and (max-width: 1023px) {
       header section button.game-size-32 {
+        display: none; } }
+    @media screen and (min-width: 0px) and (max-width: 640px) {
+      header section button.game-size-24 {
+        display: none; } }
+    @media screen and (min-width: 0px) and (max-width: 640px) {
+      header section button.game-size-20 {
+        display: none; } }
+    @media screen and (min-width: 0px) and (max-width: 640px) {
+      header section button.game-size-16 {
         display: none; } }
 
 h1 {
@@ -41,6 +56,19 @@ h1 {
   font-size: 48px;
   line-height: 52px;
   text-transform: uppercase; }
+  @media screen and (min-width: 0px) and (max-width: 640px) {
+    h1 {
+      font-size: 36px;
+      line-height: 42px;
+      text-align: center; } }
+  @media screen and (min-width: 0px) and (max-width: 375px) {
+    h1 {
+      font-size: 34px;
+      line-height: 38px; } }
+  @media screen and (min-width: 0px) and (max-width: 320px) {
+    h1 {
+      font-size: 28px;
+      line-height: 32px; } }
   h1 span:nth-of-type(1) {
     color: #44749d; }
   h1 span:nth-of-type(2) {
@@ -56,6 +84,20 @@ h2 {
   font-weight: 500;
   line-height: 28px;
   text-transform: uppercase; }
+  @media screen and (min-width: 0px) and (max-width: 640px) {
+    h2 {
+      padding-right: 15px;
+      padding-left: 15px;
+      font-size: 28px;
+      line-height: 32px; } }
+  @media screen and (min-width: 0px) and (max-width: 375px) {
+    h2 {
+      font-size: 24px;
+      line-height: 28px; } }
+  @media screen and (min-width: 0px) and (max-width: 320px) {
+    h2 {
+      font-size: 18px;
+      line-height: 22px; } }
   h2::before {
     content: "";
     position: absolute;
@@ -64,6 +106,10 @@ h2 {
     height: 2px;
     bottom: -5px;
     left: 30%; }
+    @media screen and (min-width: 0px) and (max-width: 640px) {
+      h2::before {
+        width: 80%;
+        left: 10%; } }
 
 button {
   margin-right: 5px;
@@ -133,13 +179,10 @@ button {
       max-width: 700px; } }
   @media screen and (min-width: 0px) and (max-width: 640px) {
     .image-selection {
+      padding-top: 15px;
       padding-right: 15px;
       padding-left: 15px;
       max-width: 100%; } }
-  @media screen and (min-width: 0px) and (max-width: 640px) {
-    .image-selection h2 {
-      padding-right: 25px;
-      padding-left: 25px; } }
   .image-selection section {
     display: flex;
     justify-content: center;
