@@ -12,7 +12,7 @@ My development team does quarterly showcases where we build small projects with 
 * Learning how to properly shuffle an array (Field-Yates algorithm)
 * Attempt some CSS animations when tiles are chosen
 
-### Developmet Instructions
+### Development Instructions
 * When developing locally, run `npm run scss` to ensure styles are compiled as changes are made.
 
 [https://letsplaymemory.netlify.app/](https://letsplaymemory.netlify.app/)
