@@ -11,7 +11,7 @@ My development team does quarterly showcases where we build small projects with 
 * Continued strengthening of vanilla javascript skills (being in management has left them rusty)
 * Learning how to properly shuffle an array (Field-Yates algorithm)
 
-### Developmet Instructions
+### Development Instructions
 * When developing locally, run `npm run scss` to ensure styles are compiled as changes are made.
 
 [https://letsplaymemory.netlify.app/](https://letsplaymemory.netlify.app/)
