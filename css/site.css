@@ -152,6 +152,12 @@ button {
     margin-bottom: 0;
     margin-left: 10px;
     width: 50px; }
+  @media screen and (min-width: 0px) and (max-width: 640px) {
+    button.new-game {
+      display: block;
+      margin: 0 auto; }
+      button.new-game.hide {
+        display: none; } }
   button.start-game {
     display: block;
     margin: 25px auto 0 auto;
@@ -163,6 +169,11 @@ button {
     line-height: 52px;
     text-transform: uppercase;
     width: 400px; }
+    @media screen and (min-width: 0px) and (max-width: 640px) {
+      button.start-game {
+        font-size: 36px;
+        line-height: 40px;
+        width: 100%; } }
     button.start-game.hide {
       display: none; }
     @media screen and (min-width: 1024px) {
@@ -215,6 +226,17 @@ button {
     text-align: center;
     height: 150px;
     width: 150px; }
+    @media screen and (min-width: 0px) and (max-width: 640px) {
+      .game-board section {
+        margin: 5px; } }
+    @media screen and (min-width: 0px) and (max-width: 640px) {
+      .game-board section.tiles-16 {
+        height: 80px;
+        width: 80px; } }
+    @media screen and (min-width: 0px) and (max-width: 320px) {
+      .game-board section.tiles-16 {
+        height: 60px;
+        width: 60px; } }
     .game-board section.tiles-32 {
       height: 100px;
       width: 100px; }

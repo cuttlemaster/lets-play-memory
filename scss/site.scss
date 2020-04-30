@@ -176,6 +176,13 @@ h2 {
     height: 150px;
     width: 150px;
 
+    @include small { margin: 5px; }
+
+    &.tiles-16 {
+      @include small { height: 80px; width: 80px; }
+      @include xxsmall { height: 60px; width: 60px; }
+    }
+
     &.tiles-32 { height: 100px; width: 100px; }
     &.tiles-36 { height: 100px; width: 100px; }
 

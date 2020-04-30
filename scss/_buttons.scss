@@ -50,6 +50,15 @@ button {
     width: 50px;
   }
 
+  &.new-game {
+    @include small {
+      display: block;
+      margin: 0 auto;
+
+      &.hide { display: none; }
+    }
+  }
+
   &.start-game {
     display: block;
     margin: 25px auto 0 auto;
@@ -61,6 +70,12 @@ button {
     line-height: 52px;
     text-transform: uppercase;
     width: 400px;
+
+    @include small {
+      font-size: 36px;
+      line-height: 40px;
+      width: 100%;
+    }
 
     &.hide { display: none; }
 
