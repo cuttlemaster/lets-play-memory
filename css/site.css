@@ -26,8 +26,15 @@ header {
   padding-top: 25px;
   justify-content: space-between;
   max-width: 1000px; }
+  @media screen and (min-width: 641px) and (max-width: 1023px) {
+    header {
+      padding-right: 25px;
+      padding-left: 25px; } }
   header section {
     padding-top: 3px; }
+    @media screen and (min-width: 641px) and (max-width: 1023px) {
+      header section button.game-size-32 {
+        display: none; } }
 
 h1 {
   font-family: "Black Han Sans", "Times New Roman", arial, sans-serif;
@@ -71,9 +78,10 @@ button {
   font-weight: 700;
   line-height: 20px;
   outline: none; }
-  button:hover {
-    background-color: #c6d4e1;
-    cursor: pointer; }
+  @media screen and (min-width: 1024px) {
+    button:hover {
+      background-color: #c6d4e1;
+      cursor: pointer; } }
   button.active {
     background-color: #44749d;
     color: #ffffff; }
@@ -90,8 +98,9 @@ button {
       height: 3px;
       top: 16px;
       left: 15%; }
-    button.disabled:hover {
-      cursor: default; }
+    @media screen and (min-width: 1024px) {
+      button.disabled:hover {
+        cursor: default; } }
   button.small {
     margin-right: 0;
     margin-bottom: 0;
@@ -110,14 +119,27 @@ button {
     width: 400px; }
     button.start-game.hide {
       display: none; }
-    button.start-game:hover {
-      background-color: transparent;
-      color: #44749d; }
+    @media screen and (min-width: 1024px) {
+      button.start-game:hover {
+        background-color: transparent;
+        color: #44749d; } }
 
 .image-selection {
   margin: 0 auto;
   padding-top: 50px;
   max-width: 850px; }
+  @media screen and (min-width: 641px) and (max-width: 1023px) {
+    .image-selection {
+      max-width: 700px; } }
+  @media screen and (min-width: 0px) and (max-width: 640px) {
+    .image-selection {
+      padding-right: 15px;
+      padding-left: 15px;
+      max-width: 100%; } }
+  @media screen and (min-width: 0px) and (max-width: 640px) {
+    .image-selection h2 {
+      padding-right: 25px;
+      padding-left: 25px; } }
   .image-selection section {
     display: flex;
     justify-content: center;

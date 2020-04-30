@@ -26,7 +26,18 @@ header {
   justify-content: space-between;
   max-width: 1000px;
 
-  section { padding-top: 3px; }
+  @include medium {
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+
+  section {
+    padding-top: 3px;
+
+    button {
+      &.game-size-32 { @include medium { display: none; } }
+    }
+  }
 }
 
 h1 {
@@ -70,6 +81,23 @@ h2 {
   margin: 0 auto;
   padding-top: 50px;
   max-width: 850px;
+
+  @include medium {
+    max-width: 700px;
+  }
+
+  @include small {
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 100%;
+  }
+
+  h2 {
+    @include small {
+      padding-right: 25px;
+      padding-left: 25px;
+    }
+  }
 
   section {
     display: flex;
