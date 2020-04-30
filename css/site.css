@@ -70,8 +70,7 @@ button {
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
-  outline: none;
-  width: 125px; }
+  outline: none; }
   button:hover {
     background-color: #c6d4e1;
     cursor: pointer; }
@@ -118,11 +117,12 @@ button {
 .image-selection {
   margin: 0 auto;
   padding-top: 50px;
-  max-width: 1000px; }
+  max-width: 850px; }
   .image-selection section {
     display: flex;
     justify-content: center;
-    padding-top: 25px; }
+    padding-top: 25px;
+    flex-wrap: wrap; }
 
 .game-board {
   display: flex;
