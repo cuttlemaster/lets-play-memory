@@ -170,6 +170,9 @@ button {
       box-shadow: 0 0 8px #bdb8ad; }
     .game-board section:hover {
       cursor: pointer; }
+    .game-board section img {
+      max-width: 94%;
+      max-height: 94%; }
 
 .center {
   text-align: center; }

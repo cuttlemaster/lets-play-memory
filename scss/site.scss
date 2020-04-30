@@ -124,6 +124,11 @@ h2 {
     }
 
     &:hover { cursor: pointer; }
+
+    img {
+      max-width: 94%;
+      max-height: 94%;
+    }
   }
 }
 
